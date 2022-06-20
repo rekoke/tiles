@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import AppContainer from './components/AppContainer';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+        <header>
+            <h1>Alvaro's Tiles</h1>
+        </header>
+        <main>
+            <AppContainer />
+        </main>
+        <footer>Made with &hearts; by me</footer>
+        </div>
+    );
 }
 
 export default App;

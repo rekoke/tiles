@@ -1,0 +1,96 @@
+@use './styles/tilesContainer';
+@use './styles/search';
+@use './styles/add';
+@use './styles/buttonsContainer';
+@use './styles/variables' as v;
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,400,700,900');
+
+
+
+body{
+    background-color: v.$bckgrnd;
+}
+.App{
+    margin: 0 auto;
+    box-sizing: border-box;
+    height: 100vh;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    header{
+        font-size: 24px;
+        color: v.$primary;
+        text-align: left;
+        user-select: none;
+        background: white;
+        margin-top: 0;
+        min-height: 60px;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        h1{
+            max-width: 1200px;
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+            font-size: 24px;
+            font-weight: 900;
+        }
+    }
+    main{
+        flex: 1;
+        .app-container{
+            padding: 20px;
+            flex: 1;
+            .-container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 50px;
+                padding: 20px;
+                max-width: 1200px;
+                margin: 50px auto 0;
+                .section-title{
+                    color: v.$primary;
+                    font-size: 26px;
+                    font-weight: 800;
+                    user-select: none;
+                    margin-bottom: 20px;
+                }
+        
+                input{
+                    border-radius: 3px;
+                    border-color: v.$primary;
+                    border-width: 1px;
+                    border-style: solid;
+                    margin-bottom: 15px;
+                    width: 200px;
+                    height: 22px;
+                    padding-left: 5px;
+                    &::-webkit-input-placeholder {
+                        /* WebKit browsers */
+                        opacity: 0;
+                    }
+                    &:focus-visible{
+                        outline: 0;
+                    }
+                }
+                    
+        
+            }
+        }
+    }
+    footer{
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        width: 100%;
+        left: 0;
+        right: 0;
+        opacity: .8;
+        font-size: 14px;
+        color: v.$primary;
+        user-select: none;
+        min-height: 50px;
+    }
+}

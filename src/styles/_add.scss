@@ -1,0 +1,85 @@
+@use 'variables' as v;
+
+.add-container{
+    .formAddTile{
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        .input-wrapper{
+            display: flex;
+            flex-direction: column;
+            label{
+                text-transform: uppercase;
+                font-size: 12px;
+                margin-bottom: 5px;
+                color: v.$primary;
+                font-weight: 600;
+                transition: all 0.2s;
+                user-select: none;
+            }
+            &:focus-within{ 
+                label{
+                    color: white;
+                }
+            }
+        }
+        button{
+            margin-top: 15px;
+            background: v.$primary;
+            color: white;
+            font-size: 14px;
+            border: none;
+            border-radius: 3px;
+            padding: 5px 10px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.2s;
+            min-height: 30px;
+            position: relative;
+            &:disabled{
+                opacity: .4;
+                cursor: auto;
+            }
+            .button-inside{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                .lds-ring {
+                    display: inline-block;
+                    position: relative;
+                    width: 25px;
+                    height: 17px;
+                }
+                .lds-ring div {
+                    box-sizing: border-box;
+                    display: block;
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    border: 2px solid #fff;
+                    border-radius: 50%;
+                    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+                    border-color: #fff transparent transparent transparent;
+                }
+                .lds-ring div:nth-child(1) {
+                    animation-delay: -0.45s;
+                }
+                .lds-ring div:nth-child(2) {
+                    animation-delay: -0.3s;
+                }
+                .lds-ring div:nth-child(3) {
+                    animation-delay: -0.15s;
+                }
+                @keyframes lds-ring {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+        }
+    }
+}
