@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/tile-grid/static/css/main.1bdac8a0.css",
-    "main.js": "/tile-grid/static/js/main.85f4b8ee.js",
-    "index.html": "/tile-grid/index.html",
-    "main.1bdac8a0.css.map": "/tile-grid/static/css/main.1bdac8a0.css.map",
-    "main.85f4b8ee.js.map": "/tile-grid/static/js/main.85f4b8ee.js.map"
+    "main.css": "/tiles/static/css/main.1bdac8a0.css",
+    "main.js": "/tiles/static/js/main.85f4b8ee.js",
+    "index.html": "/tiles/index.html",
+    "main.1bdac8a0.css.map": "/tiles/static/css/main.1bdac8a0.css.map",
+    "main.85f4b8ee.js.map": "/tiles/static/js/main.85f4b8ee.js.map"
   },
   "entrypoints": [
     "static/css/main.1bdac8a0.css",
