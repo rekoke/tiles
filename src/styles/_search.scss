@@ -18,6 +18,11 @@
             list-style: none;
             .image-container{
                 height: 100%;
+                &__info{
+                    &__desc{
+                        display: none;
+                    }
+                }
                 .lazy-load-image-loaded{
                     height: 100%;
                     width: 100%;
