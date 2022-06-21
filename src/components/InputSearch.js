@@ -3,16 +3,15 @@ import { React } from "react";
 const InputSearch = (props) => {
     return (
         <div className="search-form">
-        <label for="title" className="search-form__label">Title</label>
+        <label htmlFor="title" className="search-form__label">Title</label>
         <input
-            type="input"
+            type="text"
             className="search-form__field"
-            placeholder="Name"
-            name="name"
-            id="name"
+            placeholder="Title"
+            name="title"
+            id="title"
             onChange={(e) => props.setInputText(e.target.value)}
             value={props.inputText}
-            required 
         />
         </div>
     );

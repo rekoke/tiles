@@ -72,7 +72,7 @@ const FormAddTile = () => {
                     required
                 />
             </div>
-            <button disabled={!title || !description|| !imagePath}>
+            <button disabled={!title || !description|| !imagePath} name="add-tile">
                 {buttonStatus === BUTTON_STATES.ADD && <span className="button-inside">Add</span>}
                 {buttonStatus === BUTTON_STATES.LOADING && <span className="button-inside"><div className="lds-ring"><div></div><div></div><div></div><div></div></div></span>}
                 {buttonStatus === BUTTON_STATES.DONE && <span className="button-inside">Added!</span>}

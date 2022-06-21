@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Tile from "./Tile";
 import ReactPaginate from "react-paginate";
 import useData from "../hooks/useData";
@@ -8,10 +8,17 @@ const PER_PAGE = 4;
 
 const TilesContainerPager = () => {
     const [currentPage, setCurrentPage] = useState(0);
+    const [pageCount, setpageCount] = useState(0);
     const offset = currentPage * PER_PAGE;
     const {data} = useData();
 
-    const pageCount = Math.ceil(data?.length / PER_PAGE);
+    useEffect(() => {
+        if (!data) {
+         return;
+        }
+        setpageCount(Math.ceil(data?.length / PER_PAGE));
+    }, [data]);
+
     const currentPageData = data?.slice(offset, offset + PER_PAGE)
     .map((data, index) => 
         <Tile

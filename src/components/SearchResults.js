@@ -15,17 +15,18 @@ function SearchResults(props) {
 
     return (
         <>
-            { filteredData.length > 0 ? 
+            { filteredData?.length > 0 ? 
                 <ul className="searchResults">
                     {props.inputText && filteredData.map((item, index) => (
                         <li className="searchResults__item" key={index}>
                             <Tile
                                 key= {index}
-                                imagePath={item.imagePath} 
+                                imagePath={item.imagePath}
+                                description={item.description}
                             />
                         </li>
                     ))}
-                </ul> : <span className="no-results"><span>OOOPS...</span>NO RESULTS FOR YOUR SEARCH</span>
+                </ul> : <span className="no-results" id="noResults"><span>OOOPS...</span>NO RESULTS FOR YOUR SEARCH</span>
             }
         </>
     )
